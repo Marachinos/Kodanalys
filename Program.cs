@@ -92,6 +92,23 @@ namespace Kodanalys
                 Console.WriteLine("Användaren finns inte");
             }
         }
+        static void SearchUser() //Sök efter användare, Search for a user
+        {
+            Console.Write("Ange namn att söka: ");
+            string name = Console.ReadLine();
+
+            var foundUser = users.Find(u => u.Name == name);
+            if (foundUser != null)
+            {
+                Console.WriteLine("Användaren finns i listan.");
+            }
+            else
+            {
+                Console.WriteLine("Användaren hittades inte.");
+            }
+        }
+    }
+}
 
 
 
