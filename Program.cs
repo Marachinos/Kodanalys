@@ -41,3 +41,14 @@ namespace Kodanalys
                 }
             }
         }
+        static void ShowMenu() //Menyval, Menuchoice
+        {
+            Console.WriteLine("\nVälj ett alternativ:");
+            Console.WriteLine("1. Lägg till användare");
+            Console.WriteLine("2. Visa alla användare");
+            Console.WriteLine("3. Ta bort användare");
+            Console.WriteLine("4. Sök användare");
+            Console.WriteLine("5. Avsluta");
+            Console.Write("Ditt val: "); //La till texten istället för tomt fält, added text instead of emty fields
+        }
+
