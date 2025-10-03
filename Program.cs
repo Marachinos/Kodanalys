@@ -51,4 +51,15 @@ namespace Kodanalys
             Console.WriteLine("5. Avsluta");
             Console.Write("Ditt val: "); //La till texten istället för tomt fält, added text instead of emty fields
         }
+        static void AddUser() //Lägger till användare, Add Users
+        {
+            Console.Write("Ange namn: ");
+            string userName = Console.ReadLine();
+
+            var newUser = new User { Name = userName }; //skapar ett User-objekt, creates a user-object
+            users.Add(newUser);
+
+            Console.WriteLine("Användare tillagd");
+        }
+
 
