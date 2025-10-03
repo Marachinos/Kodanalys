@@ -7,4 +7,37 @@ namespace Kodanalys
     class Program
     {
         static List<User> users = new List<User>(); //hänvisar till user-klassen, refers to user-class
-    
+        static void Main(string[] args)
+        {
+            bool programMain = true;
+
+            while (programMain)
+            {
+                ShowMenu(); //Visar menyn för användaren, Show the menu for the user
+                string choise = Console.ReadLine();
+                Console.WriteLine();
+
+                switch (choise) //5 olika cases o ett Ogiltigt val, 5 diffrent cases and a little error
+                {
+                    case "1":
+                        AddUser();
+                        break;
+                    case "2":
+                        ListUser();
+                        break;
+                    case "3":
+                        RemoveUser();
+                        break;
+                    case "4":
+                        SearchUser();
+                        break;
+                    case "5":
+                        programMain = false;
+                        Console.WriteLine("Programmet avslutas...");
+                        break;
+                    default:
+                        Console.WriteLine("Ogiltigt val");
+                        break;
+                }
+            }
+        }
