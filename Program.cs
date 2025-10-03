@@ -76,6 +76,23 @@ namespace Kodanalys
                 }
             }
         }
+        static void RemoveUser() //ta bort inlagd användare, remove added user
+        {
+            Console.Write("Ange namn att ta bort: ");
+            string name = Console.ReadLine();
+
+            var userToRemove = users.Find(u => u.Name == name); //letar upp användaren
+            if (userToRemove != null)
+            {
+                users.Remove(userToRemove);
+                Console.WriteLine("Användaren togs bort");
+            }
+            else
+            {
+                Console.WriteLine("Användaren finns inte");
+            }
+        }
+
 
 
 
