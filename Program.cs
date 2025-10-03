@@ -61,5 +61,21 @@ namespace Kodanalys
 
             Console.WriteLine("Användare tillagd");
         }
+        static void ListUser() //listar användare, lists user
+        {
+            Console.WriteLine("Användare:");
+            if (users.Count == 0)
+            {
+                Console.WriteLine("Ingen användare tillagd.");
+            }
+            else
+            {
+                foreach (var user in users)
+                {
+                    Console.WriteLine(user.Name); //använder egenskapen från User-klassen
+                }
+            }
+        }
+
 
 
